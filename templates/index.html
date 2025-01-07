@@ -29,11 +29,13 @@
         }
 
         img {
-            max-width: 90%;
+            max-width: 100%;
             /* Ensure the image is responsive */
+            height: auto; /* Keep aspect ratio intact */
             border: 2px solid #333;
             /* Optional border for the image */
             border-radius: 10px;
+            margin-bottom: 20px;
         }
 
         p {
@@ -63,13 +65,26 @@
         .footer-content {
             margin: 5px 0;
         }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5em;
+                /* Adjust font size for smaller screens */
+            }
+
+            p {
+                font-size: 1em;
+                /* Adjust paragraph font size for smaller screens */
+            }
+        }
     </style>
 </head>
 
 <body>
     <main>
         <h1 style="font-weight: bold;">MEME SITE</h1>
-        <img height="600px" src="{{meme_pic}}" alt="Random Meme">
+        <img src="{{meme_pic}}" alt="Random Meme">
         <p>Current subreddit: <span style="color: rgb(255, 49, 49);"> {{subreddit}} </span></p>
     </main>
     <footer>
