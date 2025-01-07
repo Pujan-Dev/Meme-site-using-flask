@@ -16,7 +16,3 @@ def get_meme():
 def index():
     meme_pic, subreddit = get_meme()
     return render_template("index.html", meme_pic=meme_pic, subreddit=subreddit)
-
-# Ensure app.run is called only when executed directly
-if __name__ == "__main__":
-    app.run("0.0.0.0", port=5000)
