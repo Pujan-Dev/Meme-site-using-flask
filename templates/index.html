@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Site</title>
+    <style>
+        /* dark-theme.css */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            /* Dark background */
+            color: #e0e0e0;
+            /* Light text color */
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1; /* Ensures the main content fills the available space */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img {
+            max-width: 90%;
+            /* Ensure the image is responsive */
+            border: 2px solid #333;
+            /* Optional border for the image */
+            border-radius: 10px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.2em;
+        }
+
+        a {
+            color: #bb86fc;
+            /* Light purple links */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #1f1f1f;
+            color: #e0e0e0;
+            font-size: 0.8em;
+            border-top: 1px solid #333;
+        }
+
+        .footer-content {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1 style="font-weight: bold;">MEME SITE</h1>
+        <img height="600px" src="{{meme_pic}}" alt="Random Meme">
+        <p>Current subreddit: <span style="color: rgb(255, 49, 49);"> {{subreddit}} </span></p>
+    </main>
+    <footer>
+        <div class="footer-content">Created by <b>Pujan Neupane</b></div>
+        <div class="footer-content">Powered by <a href="https://github.com/D3vd/Meme_Api" target="_blank">Meme API</a></div>
+    </footer>
+</body>
+
+</html>
