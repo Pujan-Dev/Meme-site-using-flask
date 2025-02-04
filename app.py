@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 import requests
 import json
-
+#this is an simple comment
 app = Flask(__name__)
 
 def get_meme():
